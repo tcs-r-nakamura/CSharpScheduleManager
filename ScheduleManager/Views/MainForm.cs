@@ -47,6 +47,10 @@ namespace ScheduleManager.Views
                 scheduleListBox.Items.Add("");
             }
         }
+        public void Run()
+        {
+            Application.Run(this);
+        }
 
         public void ShowMessage(string message, string caption, bool isError = false)
         {

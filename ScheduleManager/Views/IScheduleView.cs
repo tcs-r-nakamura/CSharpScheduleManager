@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ScheduleManager.Views
 {
     /// <summary>
-    /// 
+    /// スケジュール管理ビューインターフェース
     /// </summary>
     public interface IScheduleView
     {

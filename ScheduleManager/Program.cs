@@ -1,7 +1,8 @@
 using ScheduleManager.Models;
+using ScheduleManager.Presenters;
 using ScheduleManager.Repositories;
 using ScheduleManager.Views;
-using static ScheduleManager.Presenters.ScedulePresenter;
+using static ScheduleManager.Presenters.SchedulePresenter;
 
 namespace ScheduleManager
 {
@@ -22,10 +23,9 @@ namespace ScheduleManager
             var model = new ScheduleModel();
             // Save data in the same directory as the executable
             var repository = new ScheduleRepository("schedule_data_csharp.json");
-
             var presenter = new SchedulePresenter(view, model, repository);
 
-            view.Run();
+            Application.Run(view);
         }
     }
 }
