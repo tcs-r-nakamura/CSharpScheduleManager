@@ -30,7 +30,7 @@ namespace ScheduleManager.Repositories
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonString = JsonSerializer.Serialize(schedules, options);
-            File.WriteAllTextAsync(_filePath, jsonString);
+           　await File.WriteAllTextAsync(_filePath, jsonString);
         }
 
         /// <summary>

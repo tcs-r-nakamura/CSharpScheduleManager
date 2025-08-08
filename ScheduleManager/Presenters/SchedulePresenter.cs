@@ -83,11 +83,12 @@ namespace ScheduleManager.Presenters
             /// </summary>
             private async Task ResetAllAsync()
             {
-                if (_view.ShowConfirmation("すべての予定を削除してもよろしいですか？", "リセットの確認"))
-                {
-
-                }
+            if (_view.ShowConfirmation("すべての予定を削除してもよろしいですか？", "リセットの確認"))
+            {
+                _model.ClearAllSchedules();
+                await SaveAndRefreshViewAsync();
             }
+        }
 
             /// <summary>
             /// スケジュールデータを保存してビューを更新
