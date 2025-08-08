@@ -2,7 +2,6 @@ using ScheduleManager.Models;
 using ScheduleManager.Presenters;
 using ScheduleManager.Repositories;
 using ScheduleManager.Views;
-using static ScheduleManager.Presenters.SchedulePresenter;
 
 namespace ScheduleManager
 {

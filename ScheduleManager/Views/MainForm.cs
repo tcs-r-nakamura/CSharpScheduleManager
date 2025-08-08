@@ -39,10 +39,10 @@ namespace ScheduleManager.Views
             scheduleListBox.Items.Clear();
             foreach (var entry in schedules)
             {
-                scheduleListBox.Items.Add($"--- {entry.Value} ---");
+                scheduleListBox.Items.Add($"--- {entry.Key} ---");
                 for (int i = 0; i < entry.Value.Count; i++)
                 {
-                    scheduleListBox.Items.Add($"{i + 1}. {entry.Key[i]}");
+                    scheduleListBox.Items.Add($"{i + 1}. {entry.Value[i]}");
                 }
                 scheduleListBox.Items.Add("");
             }

@@ -1,8 +1,6 @@
-﻿using ScheduleManager.Views;
-using ScheduleManager.Models;
+﻿using ScheduleManager.Models;
 using ScheduleManager.Repositories;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using ScheduleManager.Views;
 namespace ScheduleManager.Presenters
 {
         /// <summary>

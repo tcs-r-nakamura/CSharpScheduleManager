@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ScheduleManager.Models
+﻿namespace ScheduleManager.Models
 {
     /// <summary>
     /// スケジュールモデル
@@ -23,6 +17,10 @@ namespace ScheduleManager.Models
         /// <param name="task">追加するタスクの内容</param>
         public void AddSchedule(string date, string task)
         {
+            if (!_schedules.ContainsKey(date))
+            {
+                _schedules[date] = new List<string>();
+            }
             _schedules[date].Add(task);
         }
 
@@ -52,7 +50,7 @@ namespace ScheduleManager.Models
         /// </summary>
         public void ClearAllSchedules()
         {
-
+            _schedules.Clear();
         }
 
         /// <summary>
